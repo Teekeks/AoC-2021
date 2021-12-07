@@ -1,13 +1,12 @@
 from util import get_input
 import time
-from pprint import pprint
 
 inp = get_input(6)
 t0 = time.perf_counter()
 
 raw_fish = [int(x) for x in inp[0].split(',')]
 
-fish = {i: 0 for i in range(9)}
+fish = [0 for i in range(9)]
 for sushi in raw_fish:
     fish[sushi] += 1
 
@@ -25,10 +24,10 @@ for day in range(256):
 
     if day == 79:
         print('Part 1:')
-        print(sum(fish.values()))
+        print(sum(fish))
 
 print('Part 2:')
-print(sum(fish.values()))
+print(sum(fish))
 
 t1 = time.perf_counter() - t0
 print(f'time taken: {t1:.6f}s')
