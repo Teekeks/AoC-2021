@@ -62,3 +62,6 @@ for basin in basins:
 basins = sorted(basins, key=len)
 print('Part 2:')
 print(len(basins[-1]) * len(basins[-2]) * len(basins[-3]))
+
+t1 = time.perf_counter() - t0
+print(f'time taken: {t1:.6f}s')
